@@ -1,0 +1,1 @@
+{"uuid":"aa06b967-697c-43b1-8c39-b3363529b66d","name":"verTodosOsLivros()","children":["9c17765f-e1a3-480d-83b2-79b780bfff3c"],"befores":[{"name":"CollectionOfIsbn","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1678448000973,"stop":1678448001187}],"afters":[],"start":1678448000777,"stop":1678448006693}

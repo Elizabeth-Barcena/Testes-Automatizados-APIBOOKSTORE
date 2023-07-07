@@ -1,0 +1,1 @@
+{"uuid":"624453d5-9703-4db4-a712-79c69693fde4","name":"verLivroPorIsbnIncorreto()","children":["e6220d16-0c9c-49ff-9484-4eccf86128ab"],"befores":[{"name":"CollectionOfIsbn","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1678448006718,"stop":1678448006718}],"afters":[],"start":1678448006712,"stop":1678448007434}

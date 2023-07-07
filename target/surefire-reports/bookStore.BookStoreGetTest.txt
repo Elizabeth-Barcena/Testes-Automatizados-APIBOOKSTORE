@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: bookStore.BookStoreGetTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.43 s - in bookStore.BookStoreGetTest
+bookStore.BookStoreGetTest.verTodosOsLivros  Time elapsed: 5.808 s
+bookStore.BookStoreGetTest.verLivroPorIsbnIncorreto  Time elapsed: 0.721 s
+bookStore.BookStoreGetTest.verLivroPorIsbn  Time elapsed: 0.676 s

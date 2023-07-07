@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: bookStore.BookStoreDeleteTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.376 s - in bookStore.BookStoreDeleteTest
+bookStore.BookStoreDeleteTest.deletaUmLivroDoCarrinhoSemToken  Time elapsed: 3.068 s
+bookStore.BookStorePostTest.adicionarLivroComIdIncorreto  Time elapsed: 3.692 s
+bookStore.BookStoreDeleteTest.deletaTodosOsLivrosDoCarrinho  Time elapsed: 3.103 s

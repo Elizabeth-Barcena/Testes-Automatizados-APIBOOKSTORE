@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "dbb01738-7ae8-4ca4-b3e1-f8d9d6b9ba7e",
+		"name": "BookStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22661842"
+	},
+	"item": [
+		{
+			"name": "Criar usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"alice\",\r\n  \"password\": \"Alice*123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BookStore}}/Account/v1/User",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"Account",
+						"v1",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GerarToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"alice\",\r\n  \"password\": \"Alice*123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BookStore}}/Account/v1/GenerateToken",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"Account",
+						"v1",
+						"GenerateToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorized",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"alice\",\r\n  \"password\": \"Alice*123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BookStore}}/Account/v1/Authorized",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"Account",
+						"v1",
+						"Authorized"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdicionaLivrosAoUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFsaWNlIiwicGFzc3dvcmQiOiJBbGljZSoxMjM0NTYiLCJpYXQiOjE2Nzc3ODAyODN9.LRbERiBp57MysFOR688J7C9svtqVhNebjue0x5jqBcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"b3729094-9c27-4f27-8eda-85907f0ca18c\",\r\n  \"collectionOfIsbns\": [\r\n    {\r\n      \"isbn\": \"9781593275846\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BookStore}}/BookStore/v1/Books",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerLivros",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFsaWNlIiwicGFzc3dvcmQiOiJBbGljZSoxMjM0NTYiLCJpYXQiOjE2Nzc3Nzg3MjF9.dm7Yz5vjsARp51WDHq_9ec7CmUbPyUtrv0Lex5h0xyE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BookStore}}/BookStore/v1/Books",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFsaWNlIiwicGFzc3dvcmQiOiJBbGljZSoxMjM0NTYiLCJpYXQiOjE2Nzc3ODAyODN9.LRbERiBp57MysFOR688J7C9svtqVhNebjue0x5jqBcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BookStore}}/Account/v1/User/b3729094-9c27-4f27-8eda-85907f0ca18c",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"Account",
+						"v1",
+						"User",
+						"b3729094-9c27-4f27-8eda-85907f0ca18c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerLivro",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFsaWNlIiwicGFzc3dvcmQiOiJBbGljZSoxMjM0NTYiLCJpYXQiOjE2Nzc3ODAyODN9.LRbERiBp57MysFOR688J7C9svtqVhNebjue0x5jqBcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BookStore}}/BookStore/v1/Book/?ISBN=9781593277574",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Book",
+						""
+					],
+					"query": [
+						{
+							"key": "ISBN",
+							"value": "9781593277574"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AtualizaCarrinho",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFsaWNlIiwicGFzc3dvcmQiOiJBbGljZSoxMjM0NTYiLCJpYXQiOjE2Nzc3ODAyODN9.LRbERiBp57MysFOR688J7C9svtqVhNebjue0x5jqBcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"b3729094-9c27-4f27-8eda-85907f0ca18c\",\r\n  \"isbn\": \"9781449365035\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BookStore}}/BookStore/v1/Books/9781449325862",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Books",
+						"9781449325862"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletaLivroDoCarrinho",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFsaWNlIiwicGFzc3dvcmQiOiJBbGljZSoxMjM0NTYiLCJpYXQiOjE2Nzc3ODAyODN9.LRbERiBp57MysFOR688J7C9svtqVhNebjue0x5jqBcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"isbn\": \"9781449365035\",\r\n  \"userId\": \"b3729094-9c27-4f27-8eda-85907f0ca18c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BookStore}}/BookStore/v1/Book/",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletarTodosDoCarrinho",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFsaWNlIiwicGFzc3dvcmQiOiJBbGljZSoxMjM0NTYiLCJpYXQiOjE2Nzc3ODAyODN9.LRbERiBp57MysFOR688J7C9svtqVhNebjue0x5jqBcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BookStore}}/BookStore/v1/Books?UserId=b3729094-9c27-4f27-8eda-85907f0ca18c",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Books"
+					],
+					"query": [
+						{
+							"key": "UserId",
+							"value": "b3729094-9c27-4f27-8eda-85907f0ca18c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletarUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFsaWNlIiwicGFzc3dvcmQiOiJBbGljZSoxMjM0NTYiLCJpYXQiOjE2Nzc3ODAyODN9.LRbERiBp57MysFOR688J7C9svtqVhNebjue0x5jqBcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BookStore}}/Account/v1/User/b3729094-9c27-4f27-8eda-85907f0ca18c",
+					"host": [
+						"{{BookStore}}"
+					],
+					"path": [
+						"Account",
+						"v1",
+						"User",
+						"b3729094-9c27-4f27-8eda-85907f0ca18c"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BookStore",
+			"value": "https://bookstore.toolsqa.com/",
+			"type": "string"
+		}
+	]
+}
